@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +20,36 @@ class ImagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Text(
+          'حاول مرة اخرى ',
+          style: TextStyle(
+            fontSize: 40,
+            color: Colors.white,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Image.asset('images/image-1.png'),
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Image.asset('images/image-1.png'),
+                ),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
   }
 }
